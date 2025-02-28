@@ -1,0 +1,16 @@
+X = 180
+menu = [10,20,40,80,100,140,200]
+
+Y = False
+for i in range(len(menu)):
+    print(menu[i])
+    for j in range(i+1,len(menu)):
+        if menu[i] + menu[j] == X:
+            print(f"The two items that add up to", X, "are", menu[i], "and", menu[j])
+            Y = True
+            break
+    if Y:
+        break
+if not Y:
+    print("No two items add up to", X)
+
